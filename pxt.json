@@ -5,7 +5,8 @@
         "device": "*",
         "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
         "radio-broadcast": "*",
-        "Makey Makey Keymappings": "github:joylabz/makeymakey-makecode-arcade-extension#1.0.3"
+        "Makey Makey Keymappings": "github:joylabz/makeymakey-makecode-arcade-extension#1.0.3",
+        "controller": "*"
     },
     "files": [
         "main.blocks",

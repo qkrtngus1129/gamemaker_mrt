@@ -1,12 +1,12 @@
 game.splash("게임 이름")
-story.printText("서기 7954년도", 80, 50, 1, 15, story.TextSpeed.Fast)
-story.printText("지구의 오존층이", 80, 50, 1, 15, story.TextSpeed.Fast)
-story.printText("파괴되었다.", 80, 50, 1, 15, story.TextSpeed.Slow)
+story.printText("7954 AD", 80, 50, 1, 15, story.TextSpeed.Fast)
+story.printText("Earth's ozone layer", 80, 50, 1, 15, story.TextSpeed.Fast)
+story.printText("was destroyed", 80, 50, 1, 15, story.TextSpeed.Slow)
 scene.setBackgroundImage(assets.image`게임 배경`)
 while (!(controller.A.isPressed())) {
     pause(100)
 }
-tiles.setCurrentTilemap(tilemap`수준1`)
+tiles.setCurrentTilemap(tilemap`맵`)
 let 지구파견로봇 = sprites.create(img`
     ........................
     ........................
@@ -34,4 +34,3 @@ let 지구파견로봇 = sprites.create(img`
     ........................
     `, SpriteKind.Player)
 controller.moveSprite(지구파견로봇)
-scene.setBackgroundImage(assets.image`ㅁㄴㅇㄹㅁㄴㅇㄹ`)
