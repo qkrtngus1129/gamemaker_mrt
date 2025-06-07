@@ -1,17 +1,14 @@
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    story.spriteMoveToLocation(mySprite, 320, 8, 100)
+    story.spriteMoveToLocation(mySprite, mySprite.x + 100, 60, 150)
 })
 let mySprite: Sprite = null
-let 지구파견로봇: Sprite = null
 game.splash("게임 이름")
 story.printText("7954 AD", 80, 50, 1, 15, story.TextSpeed.Fast)
 story.printText("Earth's ozone layer", 80, 50, 1, 15, story.TextSpeed.Fast)
 story.printText("was destroyed", 80, 50, 1, 15, story.TextSpeed.Slow)
-scene.cameraFollowSprite(지구파견로봇)
-scene.setBackgroundImage(assets.image`게임 배경`)
-pause(2000)
-tiles.setCurrentTilemap(tilemap`맵`)
-지구파견로봇 = sprites.create(img`
+scene.setBackgroundColor(0)
+tiles.setCurrentTilemap(tilemap`ㅗ`)
+let 지구파견로봇 = sprites.create(img`
     ........................
     ........................
     ........................
@@ -37,6 +34,7 @@ tiles.setCurrentTilemap(tilemap`맵`)
     ........................
     ........................
     `, SpriteKind.Player)
+scene.cameraFollowSprite(지구파견로봇)
 지구파견로봇.setPosition(2, 60)
 controller.moveSprite(지구파견로봇)
 mySprite = sprites.create(img`
@@ -65,4 +63,7 @@ mySprite = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Food)
-mySprite.setPosition(160, 8)
+mySprite.setPosition(139, 60)
+if (지구파견로봇.isHittingTile(CollisionDirection.Right)) {
+    scene.setBackgroundImage(assets.image`화면체인지`)
+}
